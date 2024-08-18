@@ -11,6 +11,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import uuid4 from "uuid4";
+import Link from "next/link";
 
 function CreateWorkspace() {
 	const [coverImage, setCoverImage] = useState("/cover.png");
@@ -109,7 +110,12 @@ function CreateWorkspace() {
 								<Loader2Icon className="animate-spin ml-2" />
 							)}{" "}
 						</Button>
-						<Button variant="outline">Cancel</Button>
+
+						<Link href={"/dashboard"}>
+							<Button variant="outline">
+								Cancel
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>
