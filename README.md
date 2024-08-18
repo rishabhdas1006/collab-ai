@@ -12,6 +12,7 @@ CollabAI is a cutting-edge collaboration platform that seamlessly integrates AI 
 
 - **AI-Driven Content Generation**: Utilize Google Gemini's API to auto-generate content within your documents, making collaboration smarter and faster.
 - **Real-Time Collaboration**: Powered by Liveblocks, experience real-time comments and notifications for dynamic teamwork.
+- **Rich Text Editing**: Integrated with Editor.js for a modular, extensible, and user-friendly rich text editor.
 - **Seamless Authentication**: Manage users and organizations efficiently with Clerk’s authentication system.
 - **Responsive Design**: Tailwind CSS ensures a clean, responsive, and modern UI across all devices.
 - **Scalable Architecture**: Built using Next.js and React.js, the application is designed for performance and scalability.
@@ -22,6 +23,7 @@ CollabAI is a cutting-edge collaboration platform that seamlessly integrates AI 
 - **React.js**: Component-based architecture for building a dynamic user interface.
 - **Clerk**: User authentication and organization management.
 - **Liveblocks**: Real-time collaboration features such as comments and notifications.
+- **Editor.js**: Rich text editor for creating and formatting content.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Google Gemini API**: AI-driven content generation.
 
@@ -103,6 +105,10 @@ CollabAI leverages Google Gemini’s API to auto-generate content within documen
 ### Real-Time Collaboration
 
 With Liveblocks integrated, CollabAI enables real-time commenting and notifications, ensuring that team members are always in sync. Changes made by one team member are instantly visible to others, fostering a more dynamic and interactive working environment.
+
+### Rich Text Editing
+
+Editor.js provides a modular and extensible rich text editor, allowing users to create and format content with ease. Its block-based approach makes it easy to integrate with other features of CollabAI.
 
 ### Authentication and Organization Management
 
