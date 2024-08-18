@@ -1,7 +1,3 @@
-Here’s a detailed GitHub README for your project **Collab AI**:
-
----
-
 # Collab AI
 
 CollabAI is a cutting-edge collaboration platform that seamlessly integrates AI with real-time collaboration tools to enhance team productivity and innovation. Built with Next.js, React.js, and Tailwind CSS, CollabAI offers intelligent content generation, real-time comments and notifications, and seamless authentication and organization management.
