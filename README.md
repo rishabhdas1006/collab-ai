@@ -42,7 +42,7 @@ CollabAI is a cutting-edge collaboration platform that seamlessly integrates AI 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/rishabhdas1006/collab-ai.git
-   cd collabai
+   cd collab-ai
    ```
 
 2. **Install Dependencies**
@@ -146,7 +146,7 @@ We welcome contributions to CollabAI! Please fork the repository and submit a pu
 
 ## Contact
 
-For any questions or support, please open an issue or reach out via email at [your-email@example.com](mailto:prin100603@gmail.com).
+For any questions or support, please open an issue or reach out via email at [prin100603@gmail.com](mailto:prin100603@gmail.com).
 
 ---
 
