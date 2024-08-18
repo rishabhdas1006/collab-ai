@@ -15,7 +15,7 @@ import uuid4 from "uuid4";
 function CreateWorkspace() {
 	const [coverImage, setCoverImage] = useState("/cover.png");
 	const [workspaceName, setWorkspaceName] = useState();
-	const [emoji, setEmoji] = useState();
+	const [emoji, setEmoji] = useState("😊");
 	const { user } = useUser();
 	const { orgId } = useAuth();
 	const [loading, setLoading] = useState(false);
