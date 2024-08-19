@@ -9,7 +9,7 @@ import { toast } from "sonner";
 function DcoumentHeader() {
 	const share = useRouter();
 
-	const base = process.env.NEXT_PUBLIC_BASE_URL;
+	const base = process.env.NEXT_PUBLIC_VERCEL_URL;
 	const pathname = usePathname();
 
 	const links = base + pathname;
