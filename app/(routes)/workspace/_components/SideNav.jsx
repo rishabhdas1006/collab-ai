@@ -9,6 +9,7 @@ import {
 	query,
 	setDoc,
 	where,
+	getDocs,
 } from "firebase/firestore";
 import { Bell, Loader2Icon } from "lucide-react";
 import React, { useEffect, useState } from "react";
@@ -23,17 +24,32 @@ import NotificationBox from "./NotificationBox";
 const MAX_FILE = process.env.NEXT_PUBLIC_MAX_FILE_COUNT;
 
 function SideNav({ params }) {
+	const [workspaceName, setWorkspaceName] = useState("");
 	const [documentList, setDocumentList] = useState([]);
 	const { user } = useUser();
 	const [loading, setLoading] = useState(false);
 	const router = useRouter();
 	useEffect(() => {
 		params && GetDocumentList();
+		GetWorkspaceName();
 	}, [params]);
 
 	/**
 	 * Used to get Document List
 	 */
+
+	const GetWorkspaceName = async () => {
+		const q = query(
+			collection(db, "Workspace"),
+			where("id", "==", Number(params?.workspaceid))
+		);
+		const querySnapshot = await getDocs(q);
+		if (!querySnapshot.empty) {
+			const workspace = querySnapshot.docs[0].data();
+			setWorkspaceName((workspace.workspaceName).toUpperCase());
+		}
+	};
+
 	const GetDocumentList = () => {
 		const q = query(
 			collection(db, "workspaceDocuments"),
@@ -102,7 +118,7 @@ function SideNav({ params }) {
 			<hr className="my-5"></hr>
 			<div>
 				<div className="flex justify-between items-center">
-					<h2 className="font-medium">Workspace Name</h2>
+					<h2 className="font-medium">{workspaceName}</h2>
 					<Button
 						size="sm"
 						className="text-lg"

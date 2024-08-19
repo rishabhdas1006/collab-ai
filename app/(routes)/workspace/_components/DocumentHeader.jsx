@@ -3,13 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import React from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { toast } from "sonner";
 
 function DcoumentHeader() {
-	const share = useRouter();
 
-	const base = "https://" + process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL;
+	const base = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ? ("https://" + process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL) : process.env.NEXT_PUBLIC_BASE_URL;
 	const pathname = usePathname();
 
 	const links = base + pathname;
