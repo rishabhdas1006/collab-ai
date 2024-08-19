@@ -12,13 +12,13 @@ function WorkspaceItemList({ workspaceList }) {
 	const OnClickWorkspaceItem = (workspaceId) => {
 		router.push("/workspace/" + workspaceId);
 	};
-	
+
 	const DeleteWorkspace = async (workspaceId) => {
 		await deleteDoc(doc(db, "Workspace", workspaceId + ""));
-		router.push("/dashboard");
+		router.refresh();
 		toast("Workspace Deleted!");
 	};
-	
+
 	const RenameWorkspace = async (workspaceId, newWorkspaceName) => {
 		const docRef = doc(db, "Workspace", workspaceId + "");
 		await updateDoc(docRef, {
@@ -51,9 +51,14 @@ function WorkspaceItemList({ workspaceList }) {
 								{workspace?.emoji} {workspace.workspaceName}
 							</h2>
 							<WorkspaceOptions
-								deleteWorkspace={() => DeleteWorkspace(workspace.id)}
+								deleteWorkspace={() =>
+									DeleteWorkspace(workspace.id)
+								}
 								renameWorkspace={(newWorkspaceName) =>
-									RenameWorkspace(workspace.id, newWorkspaceName)
+									RenameWorkspace(
+										workspace.id,
+										newWorkspaceName
+									)
 								}
 							/>
 						</div>
